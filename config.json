@@ -1,11 +1,11 @@
 {
   "MCHID": "1234567890",
-  "PRIVATE_KEY": "-----BEGIN PRIVATE KEY-----'nMIIEvwIBADANBgkqhkiG9w0BAQE...'n-----END PRIVATE KEY-----",
-  "CERT_SERIAL_NO": "444F4864EA9B34415...",
-  "APIV3_KEY": "MIIEvwIBADANBgkqhkiG9w0BAQE...",
-  "APPID": "wxd678efh567hg6787",
+  "PRIVATE_KEY_PATH": "cert/apiclient_key.pem",
+  "CERT_SERIAL_NO": "_",
+  "APIV3_KEY": "_",
+  "APPID": "wx32e3cbce3622fb4c",
   "NOTIFY_URL": "https://www.xxxx.com/notify",
-  "CERT_DIR": null,
+  "CERT_DIR": "cert",
   "LOGGER": "demo",
   "PARTNER_MODE": false,
   "PROXY": null

@@ -16,7 +16,7 @@ with open('config.json', 'r') as f:
 
 # 设置变量
 MCHID = config['MCHID']
-PRIVATE_KEY = config['PRIVATE_KEY']
+PRIVATE_KEY_PATH = config['PRIVATE_KEY_PATH']
 CERT_SERIAL_NO = config['CERT_SERIAL_NO']
 APIV3_KEY = config['APIV3_KEY']
 APPID = config['APPID']
@@ -28,7 +28,7 @@ PROXY = config['PROXY']
 
 # 使用变量
 print("MCHID:", MCHID)
-print("PRIVATE_KEY:", PRIVATE_KEY)
+print("PRIVATE_KEY_PATH:", PRIVATE_KEY_PATH)
 print("CERT_SERIAL_NO:", CERT_SERIAL_NO)
 print("APIV3_KEY:", APIV3_KEY)
 print("APPID:", APPID)
@@ -37,6 +37,10 @@ print("CERT_DIR:", CERT_DIR)
 print("LOGGER:", LOGGER_NAME)
 print("PARTNER_MODE:", PARTNER_MODE)
 print("PROXY:", PROXY)
+
+# 商户证书私钥
+with open(PRIVATE_KEY_PATH) as f:
+    PRIVATE_KEY = f.read()
 
 # 日志记录器，记录web请求和回调细节
 logging.basicConfig(filename=os.path.join(os.getcwd(), 'demo.log'), level=logging.DEBUG, filemode='a', format='%(asctime)s - %(process)s - %(levelname)s: %(message)s')
